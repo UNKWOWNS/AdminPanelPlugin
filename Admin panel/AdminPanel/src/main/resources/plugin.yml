@@ -1,0 +1,38 @@
+name: AdminPanel
+version: 1.0
+main: me.tailzz.adminpanel.AdminPanel
+api-version: "1.21"
+author: Tailzz
+description: Advanced Admin Panel Plugin
+
+commands:
+  gui:
+    description: Opens the Admin Panel GUI
+    usage: /<command>
+    permission: adminpanel.gui
+
+permissions:
+  adminpanel.*:
+    description: Gives access to all admin panel features
+    default: op
+    children:
+      adminpanel.gui: true
+      adminpanel.vanish: true
+      adminpanel.freeze: true
+      adminpanel.teleport: true
+  
+  adminpanel.gui:
+    description: Allows opening the admin GUI
+    default: op
+  
+  adminpanel.vanish:
+    description: Allows using vanish feature
+    default: op
+  
+  adminpanel.freeze:
+    description: Allows freezing players
+    default: op
+  
+  adminpanel.teleport:
+    description: Allows teleporting to players
+    default: op
