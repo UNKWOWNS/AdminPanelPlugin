@@ -20,11 +20,11 @@ jobs:
           java-version: '17'
 
       - name: Build with Maven
-        working-directory: "AdminPanelPlugin/Admin panel/AdminPanel"
+        working-directory: "Admin panel/AdminPanel"
         run: mvn clean package
 
       - name: Upload JAR
         uses: actions/upload-artifact@v4
         with:
           name: AdminPanelPlugin-JAR
-          path: AdminPanelPlugin/Admin panel/AdminPanel/target/*.jar
+          path: Admin panel/AdminPanel/target/*.jar
